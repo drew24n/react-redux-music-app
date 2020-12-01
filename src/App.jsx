@@ -2,8 +2,14 @@ import React, {useEffect} from 'react';
 import styles from './styles/App.module.scss';
 import {Switch, Route, useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import ScrollToTop from "react-scroll-to-top";
 import Home from "./pages/Home";
 import {notificationError} from "./utils/notifications";
+import Artist from "./pages/Artist";
+import Search from "./pages/Search";
+import NavBar from "./components/NavBar";
+import NotFound from "./pages/NotFount";
+import {Spin} from "antd";
 
 export default function App() {
     const state = useSelector(state => state)
@@ -16,9 +22,16 @@ export default function App() {
 
     return (
         <div className={styles.container}>
-            <Switch>
-                <Route exact path={'/'} render={() => <Home dispatch={dispatch}/>}/>
-            </Switch>
+            <NavBar/>
+            <Spin size="large" spinning={state.isFetching}>
+                <Switch>
+                    <Route exact path={'/'} render={() => <Home dispatch={dispatch} state={state} history={history}/>}/>
+                    <Route path={'/search'} render={() => <Search dispatch={dispatch}/>}/>
+                    <Route path={'/artist'} render={() => <Artist dispatch={dispatch}/>}/>
+                    <Route render={() => <NotFound/>}/>
+                </Switch>
+            </Spin>
+            <ScrollToTop top={150} smooth/>
         </div>
     )
 }
