@@ -30,10 +30,12 @@ export default function Home({dispatch, state, history}) {
                     return (
                         <div key={index} className={styles.trackItem}>
                             <div className={styles.title}>
-                                <p>{track.artist.name}: "{track.name}"</p>
+                                <NavLink to={`/artist?name=${track.artist.name}`}>
+                                    <p>{track.artist.name}: "{track.name}"</p>
+                                </NavLink>
                             </div>
                             <img src={track.image[2].["#text"]} alt="cover"/>
-                            <a href={track.url} target="_blank">Artist Profile</a>
+                            <a href={track.url} target="_blank" rel="noreferrer">Artist Profile</a>
                         </div>
                     )
                 })}

@@ -26,8 +26,8 @@ export default function App() {
             <Spin size="large" spinning={state.isFetching}>
                 <Switch>
                     <Route exact path={'/'} render={() => <Home dispatch={dispatch} state={state} history={history}/>}/>
+                    <Route path={'/artist'} render={() => <Artist dispatch={dispatch} state={state} history={history}/>}/>
                     <Route path={'/search'} render={() => <Search dispatch={dispatch}/>}/>
-                    <Route path={'/artist'} render={() => <Artist dispatch={dispatch}/>}/>
                     <Route render={() => <NotFound/>}/>
                 </Switch>
             </Spin>
