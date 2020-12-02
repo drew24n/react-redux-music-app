@@ -1,1 +1,29 @@
-.container {}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 70px);
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .resultItem {
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
+}

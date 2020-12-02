@@ -9,3 +9,8 @@
     justify-content: center;
     margin-bottom: 20px !important;
 }
+
+#search {
+    display: block;
+    margin: 0 auto;
+}

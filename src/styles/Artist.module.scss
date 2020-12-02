@@ -4,12 +4,15 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 30px;
-  max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 70px);
 
   .tags {
     margin: 30px 0;
+  }
+
+  p {
+    text-align: justify;
   }
 
   p > img {

@@ -27,7 +27,7 @@ export default function App() {
                 <Switch>
                     <Route exact path={'/'} render={() => <Home dispatch={dispatch} state={state} history={history}/>}/>
                     <Route path={'/artist'} render={() => <Artist dispatch={dispatch} state={state} history={history}/>}/>
-                    <Route path={'/search'} render={() => <Search dispatch={dispatch}/>}/>
+                    <Route path={'/search'} render={() => <Search dispatch={dispatch} state={state} history={history}/>}/>
                     <Route render={() => <NotFound/>}/>
                 </Switch>
             </Spin>
