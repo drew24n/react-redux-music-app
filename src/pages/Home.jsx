@@ -12,7 +12,7 @@ export default function Home({dispatch, state, history}) {
         if (page && +page !== state.pageNumber) {
             dispatch(setPageNumber(+page))
         } else {
-            dispatch(getTopTracks(state.pageNumber))
+            dispatch(getTopTracks(state.pageNumber, 30))
         }
     }, [dispatch, state.pageNumber, page])
 
@@ -41,7 +41,7 @@ export default function Home({dispatch, state, history}) {
                 })}
             </div>
             <Pagination defaultCurrent={1} current={state.pageNumber} total={state.totalCount}
-                        onChange={paginationHandler} pageSize={state.pageSize} showSizeChanger={false}/>
+                        onChange={paginationHandler} pageSize={30} showSizeChanger={false} size="small"/>
         </main>
     )
 }

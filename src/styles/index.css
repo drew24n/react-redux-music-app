@@ -6,8 +6,9 @@
 
 .ant-pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 20px !important;
+    margin: 20px !important;
 }
 
 #search {

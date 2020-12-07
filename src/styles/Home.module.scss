@@ -9,7 +9,7 @@
     margin: 0 10% 20px 10%;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(175px, 175px));
+    grid-template-columns: repeat(auto-fit, 175px);
     grid-auto-rows: 250px;
     grid-gap: 30px;
 
@@ -30,8 +30,11 @@
 
       a {
         display: block;
-        margin: auto;
         width: fit-content;
+      }
+
+      img + a {
+        margin: auto;
       }
     }
   }

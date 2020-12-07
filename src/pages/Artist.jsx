@@ -13,7 +13,7 @@ export default function Artist({dispatch, history, state}) {
     return (
         <main className={styles.container}>
             <h1>Artist Info</h1>
-            <div className={styles.info}>
+            <div>
                 <h2>{state.artist.name}</h2>
                 <p>
                     <img src={state.artist.imgUrl} alt="artist img"/>
