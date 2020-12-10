@@ -31,7 +31,7 @@ export default function App() {
                     <Route render={() => <NotFound/>}/>
                 </Switch>
             </Spin>
-            <ScrollToTop top={150} smooth/>
+            <ScrollToTop top={150} smooth style={{right: '20px', bottom: '45px'}}/>
         </div>
     )
 }

@@ -16,6 +16,7 @@
     .trackItem {
       display: flex;
       flex-direction: column;
+      text-align: center;
 
       .title {
         cursor: pointer;
@@ -26,11 +27,6 @@
         p {
           font-weight: 700;
         }
-      }
-
-      a {
-        display: block;
-        width: fit-content;
       }
 
       img + a {

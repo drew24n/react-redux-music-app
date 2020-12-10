@@ -79,7 +79,8 @@ export const getTopTracks = (pageNumber, pageSize) => async (dispatch) => {
         dispatch(setIsFetching(true))
         const {tracks} = await fetchTopTracks(pageNumber, pageSize)
         if (tracks) {
-            dispatch(setTotalCount(parseInt(tracks.["@attr"].total)))
+            // dispatch(setTotalCount(parseInt(tracks.["@attr"].total)))
+            dispatch(setTotalCount(1500)) //hardcoded due to api limitations
             dispatch(setTracks(tracks.track))
         }
     } catch (error) {
@@ -97,7 +98,7 @@ export const getArtistInfo = (artistName) => async (dispatch) => {
             name: artist.name,
             summary: artist.bio.content,
             tags: artist.tags.tag,
-            imgUrl: artist.image[2].["#text"]
+            imgUrl: artist.image[2]["#text"]
         }))
     } catch (error) {
         notificationError(error)

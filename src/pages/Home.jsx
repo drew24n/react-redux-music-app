@@ -34,14 +34,14 @@ export default function Home({dispatch, state, history}) {
                                     <p>{track.artist.name}: "{track.name}"</p>
                                 </NavLink>
                             </div>
-                            <img src={track.image[2].["#text"]} alt="cover"/>
+                            <img src={track.image[2]["#text"]} alt="cover"/>
                             <a href={track.url} target="_blank" rel="noreferrer">Artist Profile</a>
                         </div>
                     )
                 })}
             </div>
             <Pagination defaultCurrent={1} current={state.pageNumber} total={state.totalCount}
-                        onChange={paginationHandler} pageSize={30} showSizeChanger={false} size="small"/>
+                        onChange={paginationHandler} pageSize={30} showSizeChanger={false} responsive/>
         </main>
     )
 }

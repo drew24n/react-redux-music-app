@@ -54,7 +54,6 @@ export default function Search({dispatch, state, history}) {
                     </>
                     : null
                 }
-
             </div>
         </main>
     )
